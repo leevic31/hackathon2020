@@ -4,7 +4,7 @@ unless Rails.env.production?
   connection.tables.each do |table|
     connection.execute("TRUNCATE #{table}") unless table == "schema_migrations"
   end
-  paths = %w[db/country_temps-dump.sql db/state_temps-dump.sql]
+  paths = %w[db/country_temps-dump.sql db/state_temps-dump.sql db/trump_tweets-dump.sql]
 
   ActiveRecord::Base.transaction do
     paths.each do |path|

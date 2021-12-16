@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_15_183217) do
+ActiveRecord::Schema.define(version: 2021_12_16_145239) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,8 +20,8 @@ ActiveRecord::Schema.define(version: 2021_12_15_183217) do
     t.decimal "averageTemperature", precision: 10, scale: 2
     t.decimal "averageTemperatureUncertainty", precision: 10, scale: 2
     t.string "country"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", precision: 6, default: -> { "now()" }, null: false
+    t.datetime "updated_at", precision: 6, default: -> { "now()" }, null: false
     t.index ["country"], name: "index_country_temperatures_on_country"
   end
 
@@ -31,10 +31,23 @@ ActiveRecord::Schema.define(version: 2021_12_15_183217) do
     t.decimal "averageTemperatureUncertainty", precision: 10, scale: 2
     t.string "state"
     t.string "country"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", precision: 6, default: -> { "now()" }, null: false
+    t.datetime "updated_at", precision: 6, default: -> { "now()" }, null: false
     t.index ["country"], name: "index_state_temperatures_on_country"
     t.index ["state"], name: "index_state_temperatures_on_state"
+  end
+
+  create_table "trump_tweets", force: :cascade do |t|
+    t.bigint "tweetId"
+    t.string "link"
+    t.text "content"
+    t.datetime "publishedAt"
+    t.integer "retweets"
+    t.integer "favorites"
+    t.string "mentions"
+    t.string "hashtags"
+    t.datetime "created_at", precision: 6, default: -> { "now()" }, null: false
+    t.datetime "updated_at", precision: 6, default: -> { "now()" }, null: false
   end
 
 end

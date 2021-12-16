@@ -6,7 +6,7 @@ class CreateTempByStateTable < ActiveRecord::Migration[6.1]
       t.decimal :averageTemperatureUncertainty, scale: 2, precision: 10
       t.string :state, index: true
       t.string :country, index: true
-      t.timestamps
+      t.timestamps default: -> { 'NOW()' }
     end
   end
 end
