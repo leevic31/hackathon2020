@@ -25,7 +25,10 @@ bundler install
 echo "########### WEBPACKER INSTALL ###########"
 rails webpacker:install
 
-echo "########### DB SETUP & SEED ###########"
+echo "########### DB SETUP ###########"
 rails db:setup
+echo "########### DB SEED ###########"
 rails db:seed
+
+echo "Script ended. Please run a local server and make sure everything is correctly installed."
 
