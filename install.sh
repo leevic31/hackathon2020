@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cd "$(dirname "$0")" || exit 0
+export RAILS_ENV=development
 
 echo "########### CHECKING DEPENDENCIES ###########"
 
