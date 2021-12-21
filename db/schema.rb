@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_16_145239) do
+ActiveRecord::Schema.define(version: 2021_12_21_172227) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,16 @@ ActiveRecord::Schema.define(version: 2021_12_16_145239) do
     t.datetime "created_at", precision: 6, default: -> { "now()" }, null: false
     t.datetime "updated_at", precision: 6, default: -> { "now()" }, null: false
     t.index ["country"], name: "index_country_temperatures_on_country"
+  end
+
+  create_table "sentiments", force: :cascade do |t|
+    t.bigint "tweetId"
+    t.string "irony"
+    t.string "hate"
+    t.string "sentiment"
+    t.string "emotion"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "state_temperatures", force: :cascade do |t|
