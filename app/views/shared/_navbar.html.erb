@@ -1,0 +1,47 @@
+<!-- _navbar.html.erb -->
+<h1 class="pb-4">Trump Tweets X</h1>
+          <h2 class="h5 text-uppercase">Range</h2>
+          <h2 class="h6 text-uppercase">Starting</h2>
+          <input
+            type="date"
+            class="form-control-sm bg-light"
+            id="startingDate"
+          /><br />
+          <h2 class="h6 text-uppercase">Ending</h2>
+          <input
+            type="date"
+            class="form-control-sm bg-light"
+            id="endingDate"
+          /><br />
+          <button type="button" class="btn btn-primary" id="updateDateRange"><u>Update Display</u></button>
+
+          <h2 class="h5 text-uppercase pt-4">Filters</h2>
+          <p class="h6 text-uppercase text-white">Sentiment</p>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="sentimentPositive"
+            />
+            <label class="form-check-label small" for="sentimentPositive"
+              >Positive</label
+            ><br />
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="sentimentNegative"
+            />
+
+            <label class="form-check-label small" for="sentimentNegative"
+              >Negative</label
+            ><br />
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="sentimentNeutral"
+            />
+            <label class="form-check-label small" for="sentimentNeutral"
+              >Neutral</label
+            ><br />
+        <!-- end _navbar.html.erb -->
+
