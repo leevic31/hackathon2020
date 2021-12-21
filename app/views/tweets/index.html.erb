@@ -1,4 +1,6 @@
-<h1>Tweets</h1>
+<div class="col-6 col-sm-6 col-md-7 col-lg-5">
+  <div class="mb-4 bg-white text-dark px-2 py-1">
+    <h2 class="h4">Tweets</h2>
 
 <ul>
   <% @tweets.each do |tweet| %>
@@ -9,3 +11,28 @@
 </ul>
 
 <%= paginate @tweets %>
+
+</div>
+</div>
+            <div class="col-6 col-sm-6 col-md-7 col-lg-4">
+              <div class="mb-4 bg-white text-dark px-2 py-1">
+                <h2 class="h4">Proportions</h2>
+                <p>Imagine a Pie Chart like you've Never Seen Before.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 col-sm-6 col-md-7 col-lg-5">
+              <div class="mb-4 bg-white text-dark px-2 py-1">
+                <h2 class="h4">Over Time</h2>
+                <p>Here is a time Series. Isn't it lovely?</p>
+              </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-7 col-lg-4">
+              <div class="mb-4 bg-white text-dark px-2 py-1">
+                <h2 class="h4">Additional Notes</h2>
+                <p>A note section goes here</p>
+              </div>
+            </div>
+          </div>
+        </div>
