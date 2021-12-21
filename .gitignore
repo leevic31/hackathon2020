@@ -42,3 +42,5 @@ yarn-debug.log*
 # ROSE: Ignore my personal mockups stash
 /mockups/
 
+.env
+.DS_Store
