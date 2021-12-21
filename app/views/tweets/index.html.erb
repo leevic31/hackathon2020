@@ -1,5 +1,12 @@
 <h1>Tweets</h1>
 
+<%= form_with model: @trumptweet, method: :get do %>
+  <%= date_field_tag 'start_date', params[:start_date], placeholder: "Enter Start Date" %>
+  <%= date_field_tag 'end_date', params[:end_date], placeholder: "Enter End Date" %>
+  <%= submit_tag 'Search' %>
+<% end %>
+
+
 <ul>
   <% @tweets.each do |tweet| %>
     <li>
