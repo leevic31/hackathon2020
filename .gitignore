@@ -38,3 +38,7 @@ tmp/
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+# ROSE: Ignore my personal mockups stash
+/mockups/
+
