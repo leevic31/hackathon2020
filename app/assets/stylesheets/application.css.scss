@@ -16,3 +16,32 @@
 
 /* ADD BOOTSTRAP CSS */
 @import "bootstrap";
+
+.underline {
+  text-decoration: underline !important;
+}
+
+.bg-white {
+  background-color: #fff !important;
+}
+
+.bg-light {
+  background-color: #ececec !important;
+}
+
+.px-2 {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.p0 {
+  border: 0;
+  padding: 0.25em 0 0 0;
+  outline: none;
+}
+
+.py-1 {
+  margin-top: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
