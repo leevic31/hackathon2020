@@ -14,3 +14,9 @@ Turbolinks.start();
 ActiveStorage.start();
 
 import "controllers"
+
+require highcharts/highcharts                                                           
+require highcharts/highcharts-more
+require highcharts/map
+require jquery-latest.min
+require jquery.dataTables
