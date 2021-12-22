@@ -1,6 +1,6 @@
 <!-- _navbar.html.erb -->
 <h1 class="pb-4">Trump Tweets X</h1>
-          <h2 class="h5 text-uppercase">Range</h2>
+          <h2 class="h5 text-uppercase pt-4">Range</h2>
           <%= form_with model: @trumptweet, method: :get do %>
           <h2 class="h6 text-uppercase">Starting</h2>
   <%= date_field_tag 'start_date', params[:start_date], placeholder: "Start Date", class: "text-muted" %><br>
