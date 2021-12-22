@@ -1,21 +1,29 @@
 <div class="col-6 col-sm-6 col-md-7 col-lg-5">
   <div class="mb-4 bg-white text-dark px-2 py-1">
     <h2 class="h4">Tweets</h2>
-
-<%= form_with model: @trumptweet, method: :get do %>
-  <%= date_field_tag 'start_date', params[:start_date], placeholder: "Enter Start Date" %>
-  <%= date_field_tag 'end_date', params[:end_date], placeholder: "Enter End Date" %>
-  <%= submit_tag 'Search' %>
-<% end %>
-
-
-<ul>
-  <% @tweets.each do |tweet| %>
-    <li>
-      <%= tweet.content %>
-    </li>
-  <% end %>
-</ul>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col-2">Published At &middot; Tweet</th>
+      <th scope="col-2">View</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tweets.each do |tweet| %>
+      <tr>
+      <td>
+        <small><%= tweet.publishedAt %></small></br>
+        <%= tweet.content %>
+      </td>
+      <td>
+      <u>
+        <%= link_to "Details" %>
+      </u>
+      </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <% if @tweets.present? %>
 <%= paginate @tweets %>

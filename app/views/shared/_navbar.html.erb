@@ -1,20 +1,13 @@
 <!-- _navbar.html.erb -->
 <h1 class="pb-4">Trump Tweets X</h1>
           <h2 class="h5 text-uppercase">Range</h2>
+          <%= form_with model: @trumptweet, method: :get do %>
           <h2 class="h6 text-uppercase">Starting</h2>
-          <input
-            type="date"
-            class="form-control-sm bg-light"
-            id="startingDate"
-          /><br />
-          <h2 class="h6 text-uppercase">Ending</h2>
-          <input
-            type="date"
-            class="form-control-sm bg-light"
-            id="endingDate"
-          /><br />
-          <button type="button" class="btn btn-primary" id="updateDateRange"><u>Update Display</u></button>
-
+  <%= date_field_tag 'start_date', params[:start_date], placeholder: "Start Date", class: "text-muted" %><br>
+  <h2 class="h6 text-uppercase">Ending</h2>
+  <%= date_field_tag 'end_date', params[:end_date], placeholder: "End Date", class: "text-muted" %><br>
+  <%= submit_tag 'Update View', class: "btn btn-primary u underline text-underline" %>
+<% end %>
           <h2 class="h5 text-uppercase pt-4">Filters</h2>
           <p class="h6 text-uppercase text-white">Sentiment</p>
           <div class="form-check">
