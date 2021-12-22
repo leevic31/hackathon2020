@@ -113,6 +113,7 @@ GEM
     cable_ready (4.5.0)
       rails (>= 5.2)
       thread-local (>= 1.1.0)
+    chartkick (4.1.2)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
     dotenv (2.7.6)
@@ -124,6 +125,8 @@ GEM
     ffi (1.15.4)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    groupdate (5.2.4)
+      activesupport (>= 5)
     hash-deep-merge (0.1.1)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
@@ -263,11 +266,13 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   bootstrap-sass (~> 3.4, >= 3.4.1)
   byebug
+  chartkick
   daru!
   daru-data_tables!
   daru-view!
   dotenv-rails
   google_visualr!
+  groupdate
   jbuilder (~> 2.7)
   kaminari
   listen (~> 3.3)
