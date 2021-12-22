@@ -27,7 +27,9 @@ gem "daru", git: 'https://github.com/SciRuby/daru.git'
 gem "nyaplot", git: 'https://github.com/SciRuby/nyaplot.git'
 gem 'google_visualr', git: 'https://github.com/winston/google_visualr.git'
 gem 'daru-data_tables', git: 'https://github.com/Shekharrajak/daru-data_tables.git'
-
+# ADD CHARTKICK\
+gem "chartkick"
+gem 'groupdate'
 # Bootstrap SASS
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 

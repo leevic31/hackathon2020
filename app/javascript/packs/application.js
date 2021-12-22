@@ -8,6 +8,9 @@ import Turbolinks from "turbolinks";
 import * as ActiveStorage from "@rails/activestorage";
 import "channels";
 import "bootstrap";
+import "chartkick/chart.js"
+//= require chartkick
+//= require Chart.bundle
 
 Rails.start();
 Turbolinks.start();
@@ -15,8 +18,10 @@ ActiveStorage.start();
 
 import "controllers"
 
-require highcharts/highcharts                                                           
-require highcharts/highcharts-more
-require highcharts/map
-require jquery-latest.min
-require jquery.dataTables
+//= require highcharts/highcharts                                                           
+//= require highcharts/highcharts-more
+//= require highcharts/map
+//= require jquery-latest.min
+//= require jquery.dataTables
+
+*= require jquery.dataTables

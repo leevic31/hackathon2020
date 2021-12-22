@@ -1,4 +1,4 @@
-<div class="col-6 col-sm-6 col-md-7 col-lg-5">
+<div class="col-6 col-sm-6 col-md-7 col-lg-6">
   <div class="mb-4 bg-white text-dark px-2 py-1">
     <h2 class="h4">Tweets</h2>
     <% if @tweets.present? %>
@@ -38,16 +38,14 @@
 
 </div>
 </div>
-            <div class="col-6 col-sm-6 col-md-7 col-lg-4">
+            <div class="col-6 col-sm-6 col-md-7 col-lg-5">
               <div class="mb-4 bg-white text-dark px-2 py-1">
                 <h2 class="h4">Proportions</h2>
 
-                  <% if @piechart %>
+                  <% if @tweets.present? %>
 
 
-                <div id="pieChart1" style="width: 400px"></div>
-                <p>Imagine a Pie Chart like you've Never Seen Before.</p>
-              
+                <%= pie_chart @tweets.group(:publishedAt).count %>
                   <% else %>
 
     <h2 class="h6">Pas de données disponibles pour affichage.</br></br>No data to display.</h2>
@@ -58,11 +56,13 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-6 col-sm-6 col-md-7 col-lg-5">
+            <div class="col-6 col-sm-6 col-md-7 col-lg-6">
               <div class="mb-4 bg-white text-dark px-2 py-1">
                 <h2 class="h4">Over Time</h2>
-                <% if @timeseries %>
-                <p>Here is a time Series. Isn't it lovely?</p>
+
+
+                <% if @tweets.present? %>
+                  <%= line_chart @tweets.group_by_day(:publishedAt).count %>
                     <% else %>
 
     <h2 class="h6">Pas de données disponibles pour affichage.</br></br>No data to display.</h2>
@@ -71,7 +71,7 @@
 
               </div>
             </div>
-            <div class="col-6 col-sm-6 col-md-7 col-lg-4">
+            <div class="col-6 col-sm-6 col-md-7 col-lg-5">
               <div class="mb-4 bg-white text-dark px-2 py-1">
                 <h2 class="h4">Additional Notes</h2>
                 <% if @notes %>
