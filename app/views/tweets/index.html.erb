@@ -17,7 +17,9 @@
   <% end %>
 </ul>
 
+<% if @tweets.present? %>
 <%= paginate @tweets %>
+<% end %>
 
 </div>
 </div>
