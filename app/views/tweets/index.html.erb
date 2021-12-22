@@ -1,6 +1,7 @@
 <div class="col-6 col-sm-6 col-md-7 col-lg-5">
   <div class="mb-4 bg-white text-dark px-2 py-1">
     <h2 class="h4">Tweets</h2>
+    <% if @tweets.present? %>
 <table class="table">
   <thead>
     <tr>
@@ -29,13 +30,30 @@
 <%= paginate @tweets %>
 <% end %>
 
+  <% else %>
+
+    <h2 class="h6">Pas de données disponibles pour affichage.</br></br>No data to display.</h2>
+
+  <% end %>
+
 </div>
 </div>
             <div class="col-6 col-sm-6 col-md-7 col-lg-4">
               <div class="mb-4 bg-white text-dark px-2 py-1">
                 <h2 class="h4">Proportions</h2>
+
+                  <% if @piechart %>
+
+
                 <div id="pieChart1" style="width: 400px"></div>
                 <p>Imagine a Pie Chart like you've Never Seen Before.</p>
+              
+                  <% else %>
+
+    <h2 class="h6">Pas de données disponibles pour affichage.</br></br>No data to display.</h2>
+
+  <% end %>
+
               </div>
             </div>
           </div>
@@ -43,13 +61,27 @@
             <div class="col-6 col-sm-6 col-md-7 col-lg-5">
               <div class="mb-4 bg-white text-dark px-2 py-1">
                 <h2 class="h4">Over Time</h2>
+                <% if @timeseries %>
                 <p>Here is a time Series. Isn't it lovely?</p>
+                    <% else %>
+
+    <h2 class="h6">Pas de données disponibles pour affichage.</br></br>No data to display.</h2>
+
+  <% end %>
+
               </div>
             </div>
             <div class="col-6 col-sm-6 col-md-7 col-lg-4">
               <div class="mb-4 bg-white text-dark px-2 py-1">
                 <h2 class="h4">Additional Notes</h2>
+                <% if @notes %>
                 <p>A note section goes here</p>
+                  <% else %>
+
+    <h2 class="h6">Pas de données disponibles pour affichage.</br></br>No data to display.</h2>
+
+  <% end %>
+
               </div>
             </div>
           </div>
