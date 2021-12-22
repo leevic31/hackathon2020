@@ -21,6 +21,8 @@ Bundler.require(*Rails.groups)
 
 Dotenv::Railtie.load
 
+# enable gighcharts via daru view
+
 module Hackathon2020
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
